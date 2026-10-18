@@ -1,0 +1,11 @@
+Задание 2. Погода или пользователи из API
+Возьмите любой бесплатный API без ключа, например:
+https://jsonplaceholder.typicode.com/posts?_limit=10
+https://jsonplaceholder.typicode.com/comments?postId=1
+Опишите структуру под ответ.
+Сделайте запрос, проверьте err и StatusCode.
+Разберите JSON в срез структур и выведите красиво.
+Сохраните результат в файл result.json через MarshalIndent.
+(по желанию)
+Добавьте в Product поле CreatedAt time.Time и посмотрите, как оно выглядит в JSON.
+Добавьте в меню пункт «Загрузить товары из API» и сохраните их в каталог.

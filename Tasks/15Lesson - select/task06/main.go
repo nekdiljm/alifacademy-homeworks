@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func tryRead(ch chan string) {
+	select {
+	case msg := <-ch:
+		fmt.Println(msg)
+	default:
+		fmt.Println("Пусто")
+	}
+}
+
+func main() {
+	ch := make(chan string, 1)
+	ch <- "Сообщение"
+
+	tryRead(ch)
+	tryRead(ch)
+	tryRead(ch)
+
+}
