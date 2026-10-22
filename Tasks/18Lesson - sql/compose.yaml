@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: lesson18-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: nekdil2308
+      POSTGRES_DB: homework
+    ports:
+      - "5432:5432"
+    volumes:
+      - lesson18_data:/var/lib/postgresql/data
+
+volumes:
+  lesson18_data:
